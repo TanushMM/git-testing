@@ -1,0 +1,34 @@
+Status:
+git status
+
+Logging:
+git log
+git log --oneline
+
+Staging Files:
+git add <file_name>
+git add . <to select all names>
+
+committing Files
+git commit -m "Any Understandable message"
+
+Restoring Files
+git restore <file_name>
+git restore . <to select all names>
+git restore --staged <file_name> [or] git restore -S <file_name> [we'll consider this as the staged_restore method]
+
+Deleting Files:
+git delete <file_name> [or] directly deleting it in working directory(using the Operating System)
+    |--> This deletes the file and we have to stage it and then commit it or restore it using "git restore ."
+git rm <file_name> 
+    |--> This deletes the file and stages it so we just have to commit it or it can be restored 
+         using staged_restore method
+
+Renaming Files:
+[Renaming it directly using the Operating System]
+    |--> After renaming, when we use "git status", it consideres the renamed file as new
+         untracked file and the old file is considered as deleted and both are in unstaged state
+git mv <old_file.extension> <new_file.extension>
+    |--> This renames the file and stages it for committing or it can be restored using
+         stages_restore method
+    
